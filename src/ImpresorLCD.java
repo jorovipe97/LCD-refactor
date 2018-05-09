@@ -20,13 +20,17 @@ public class ImpresorLCD {
      * y el numero a imprimir
      * @param espacioDig Espacio Entre digitos
      */  
-    public void procesar(String comando, int espacioDig) {
-        
+    public void procesar(String comando_, int espacioDig) {
+        // Limpia el comando de whitespaces (\n\r) que esten en los extrmos
+    	String comando = comando_.trim();
+    	// Quita cualquier espacio en blanco en el texto
+    	comando = comando.replaceAll("\\s", "");
+    	
         String[] parametros;
         char[] digitos;
         
         // Displays para mostrar los digitos
-        DigitSegmentDisplay[] displays;
+        DigitoLCD[] displays;
         
         int tam;
 
@@ -74,7 +78,7 @@ public class ImpresorLCD {
         
         // Crea el arreglo de digitos
         digitos = parametros[1].toCharArray();        
-        displays = new DigitSegmentDisplay[digitos.length];
+        displays = new DigitoLCD[digitos.length];
         
         for (int i = 0; i < digitos.length; i++) {
             
@@ -89,7 +93,7 @@ public class ImpresorLCD {
 	        int numero = Integer.parseInt(String.valueOf(digitos[i]));
 	        
 	        // Instancia los displays para los digitos
-	        displays[i] = new DigitSegmentDisplay(tam);
+	        displays[i] = new DigitoLCD(tam);
 	        // Pone el valor del display
 	        displays[i].set(numero);	        
         }

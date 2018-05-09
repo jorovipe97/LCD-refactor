@@ -6,14 +6,17 @@
  * 
  * @see <a href="https://www.geeksforgeeks.org/wp-content/uploads/bcd.png">¿Que es un display de 7 segmentos?</a>
  *
+ * @see <a href="https://www.electrical4u.com/images/march16/1460385570.PNG">Tabla de verdad display 7 segmentos</a>
+ * 
+ * @see <a href="https://jorovipe97.github.io/Implementando-funciones-boleanas-CS01/#represantacion-cananonica-y-sus-implicaciones-teoricas---concepto2-concepto3">Concepto funcion canonica</a>
  */
-public class DigitSegmentDisplay {
+public class DigitoLCD {
 	
 	// Los 7 segmentos del display
-	private boolean[] segmentos;
+	public boolean[] segmentos;
 	
 	// Matriz que almacena lo que se imprime en consola
-	private String[][] digitDisplay;
+	public String[][] digitDisplay;
 	
 	private int displaySize;
 	
@@ -22,8 +25,11 @@ public class DigitSegmentDisplay {
 	/** El alto del display */
 	public int alto;
 	
-	public DigitSegmentDisplay(int size)
+	public DigitoLCD(int size)
 	{
+		if (size <= 0)
+			throw new IllegalArgumentException("El tamaño \""+size+"\n no esta entre el rango [0-5]");
+		
 		// Guarda el tamaño del display como miembro de clase
 		this.displaySize = size;
 		
@@ -71,13 +77,7 @@ public class DigitSegmentDisplay {
 	 * @param D El bit menos significativo del numero BCD
 	 */
 	protected void configurarSegmentos(boolean A, boolean B, boolean C, boolean D)
-	{
-		// Enciende todos los segmentos unicamente para propositos de debug
-		/*for (int i = 0; i < this.segmentos.length; i++)
-		{
-			this.segmentos[i] = true;
-		}*/
-		
+	{		
 		/* En el link puedes ver una tabla de verdad que convierte de BCD a 7 Segments: https://www.electrical4u.com/images/march16/1460385570.PNG
 		 * nos valdremos de esta tabla de verdad para hallar una función canonica como suma de miniterminos y la usaremos para 
 		 * convertir de BCD a 7-Segment, en mi blog puedes ver en mas detalle
@@ -158,6 +158,7 @@ public class DigitSegmentDisplay {
 	 * Imprime la fila del display especificada en el parametro
 	 * 
 	 * @param row La fila que quiero imprimir
+	 * @param mostrarVarios Pone un salto de linea cuando termine de leer la linea actual
 	 * @throws ArrayIndexOutOfBoundsException si la fila especificada no existe en el display
 	 */
 	public void mostrarFilaDelDisplay(int row, boolean mostrarVarios)

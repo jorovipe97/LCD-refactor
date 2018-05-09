@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
-import javax.swing.JOptionPane;
+// import javax.swing.JOptionPane;
 
 
 // Se comentó el codigo para mejorar legibilidad asi como javadocs para facilitar el entendimiento para futuros programadores.
-public class LCDTester {
+public class ProgramEntry {
 	
 	// Cuando se reciba este string el programa finalizara
     static final String CADENA_FINAL = "0,0";
