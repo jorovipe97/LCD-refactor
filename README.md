@@ -1,7 +1,7 @@
 # LCD-refactor
 Refactorizando un vizualizador LCD (ascii art) escrito en java.
 
-# ¿Qué cambio?
+# ¿Qué cambió?
 La clase **ImpresorLCD** originalmente se estaba encargando de varias funcionalidades como procesar los comandos, crear los displays, posicionarlos y asignarle valores, ahora, con las modificaciones esta clase únicamente se encarga de procesar los comandos y delega a la clase **DigitoLCD** la funcionalidad de crear un display y asignarle valores, logrando de esta manera una mayor reusabilidad y modularidad del código fuente.
 
 Cabe decir que esta clase fue desarrollada a partir de la idea de un Display LCD de 7 segmentos que se consigue en tiendas de electrónica, por tanto, se codifico el número a 7 segment para su visualización en el display.
