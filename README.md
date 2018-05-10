@@ -10,6 +10,11 @@ También se re-implemento el método estático **ImpresorLCD.isInteger()** media
 
 Además, usando **JUnit 4** se realizaron pruebas unitarias a la clase **DigitoLCD** e **ImpresorLCD** con el fin de facilitar el proceso de pruebas automáticas.
 
+# ¿Quien es Jose Villalobos?
+Estudiante de ingeniera en diseño de entretenimiento digital con destreza en distintos lenguajes de programación y motores de videojuegos como Unity, C#, OpenCV, Python, JS/CSS/HTML, C y ShaderLab/CG además cuenta con habilidades en distintos programas de diseño como Photoshop, After Effects, Adobe Premier y Blender así como conocimientos en el área de la Inteligencia Artificial.
+
+Posee experiencia en el desarrollo, comercialización y soporte de productos de software gracias a proyectos emprendidos personalmente.   Es capaz de combinar lo mejor del mundo del diseño y de la ingeniería de software gracias a su formación en principios de diseño, elaboración de narrativas, psicología cognitiva y diseño de interfaces. Adicionalmente posee buenas habilidades técnicas para el desarrollo de soluciones que requieran la integración de hardware. Habilidades que aplica constantemente en su quehacer diario para la creación de contenidos digitales de alto impacto para realidad aumentada y realidad virtual, así como montajes físicos interactivos y soluciones de internet de las cosas (IoT). 
+ 
 
 ## Fe de errata
 Pido disculpas por los errores de ortografía que puedas encontrar en los comentarios del código fuente.
